@@ -11,18 +11,39 @@
   /* height: 100%; */
 }
 
-
-
+:root {
+  --background-color: #cbd5e1;
+  --blue-color: #0ea5e9;
+  --border-left-color: #fbbf24;
+}
 
 
 svg {
   width: 25px;
-  height:25px;
+  height: 25px;
 }
 
-.grid-container > div {
-  border: 2px solid red;
+.sidebar svg {
+  fill: white;
 }
+
+.dashboard-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dashboard-top svg {
+  width: 50px;
+  height: 50px;
+}
+
+.dashboard-top div {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
 
 html, body {
   height: 100%;
@@ -68,7 +89,7 @@ html, body {
 
 .buttons-container > div.button {
   color: white;
-  background-color: blue;
+  background-color: var(--blue-color);
   width: 90px;
   height: 45px;
   border-radius: 50px;
@@ -86,10 +107,11 @@ input[type="text"] {
 
 
 .sidebar {
+  background-color: var(--blue-color);
   grid-row: 1 / span 2;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   padding: 10px 30px;
 }
 
@@ -99,7 +121,7 @@ input[type="text"] {
   padding: 20px;
   display: grid;
   grid-template-columns: 3fr 1fr;
-
+  background-color: var(--background-color);
   gap: 20px;
 }
 
@@ -107,7 +129,10 @@ input[type="text"] {
   grid-row: 1 / span 2;
 }
 
+
+
 .projects-section {
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr) ;
   grid-template-rows: repeat(3, 1fr);
@@ -122,15 +147,17 @@ input[type="text"] {
 .dashboard-options {
   display: grid;
   grid-template-rows: repeat(9, 1fr);
-  gap: 10px;
+  gap: 30px;
+  color: white;
 }
 
 
 
 
 .projects-section > div {
-  border: 2px solid blue;
-  border-radius: 8px;
+  border-left: 7px solid var(--border-left-color);
+  background-color: white;
+  border-radius: 6px;
   padding: 20px;
 
 }
@@ -142,18 +169,22 @@ input[type="text"] {
 
 
 
-.trending {
-  margin-top: auto;
-}
-
 
 
 .announcements-section, .trending-section {
   display: grid;
-  border: 2px solid red;
-  border-radius: 8px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 10px;
+  gap: 15px;
 }
 
+.trending-section > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 
 .projects-icon {
@@ -161,4 +192,8 @@ input[type="text"] {
   justify-content: end;
   gap: 10px;
   margin-top: 30px;
+}
+
+.projects span, .sidebar span, .announcements span, .trending span {
+  font-weight: bold;
 }
