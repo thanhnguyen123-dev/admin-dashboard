@@ -167,6 +167,10 @@ input[type="text"] {
   grid-row: 1 / 3;
 }
 
+.dashboard-options > li {
+  display: flex;
+  align-items: center;
+}
 
 
 
